@@ -1,29 +1,36 @@
 /* styles.css */
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.jungle-background {
+  background-image: url('https://i.imgur.com/3QZQZQz.jpg'); /* Add a jungle forest image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-  color: #333;
 }
 
 .container {
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   max-width: 600px;
   width: 100%;
+  position: relative;
 }
 
 h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #ff6f61;
+  color: #2e8b57; /* Jungle green */
 }
 
 .quote-display {
@@ -38,7 +45,7 @@ textarea {
   height: 150px;
   padding: 1rem;
   font-size: 1rem;
-  border: 2px solid #ff6f61;
+  border: 2px solid #2e8b57;
   border-radius: 5px;
   margin-bottom: 1.5rem;
   resize: none;
@@ -46,7 +53,7 @@ textarea {
 
 textarea:focus {
   outline: none;
-  border-color: #ff3b2f;
+  border-color: #228b22; /* Darker green */
 }
 
 .stats {
@@ -61,7 +68,7 @@ textarea:focus {
 }
 
 button {
-  background: #ff6f61;
+  background: #2e8b57;
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -72,5 +79,30 @@ button {
 }
 
 button:hover {
-  background: #ff3b2f;
+  background: #228b22;
+}
+
+/* Jungle-themed decorations */
+.container::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background-image: url('https://i.imgur.com/4QZQZQz.png'); /* Add a tree image */
+  background-size: cover;
+  z-index: -1;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+  background-image: url('https://i.imgur.com/5QZQZQz.png'); /* Add a monkey image */
+  background-size: cover;
+  z-index: -1;
 }
